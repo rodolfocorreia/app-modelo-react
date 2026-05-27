@@ -1,0 +1,149 @@
+.app-sidebar {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header-icon {
+    color: var(--accent);
+    font-size: 1.15rem;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-h);
+    letter-spacing: 0.2px;
+}
+
+.sidebar-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.75rem 0.5rem;
+}
+
+.sidebar-menu {
+    width: 100% !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.sidebar-menu .p-menu-list {
+    padding: 0 !important;
+}
+
+.sidebar-menu .p-submenu-header {
+    background: transparent !important;
+    color: var(--text) !important;
+    opacity: 0.65;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 0.9rem 0.85rem 0.4rem !important;
+}
+
+.sidebar-menu .p-menuitem {
+    margin: 2px 0;
+}
+
+.sidebar-menu .p-menuitem-link {
+    padding: 0.65rem 0.85rem !important;
+    border-radius: 8px !important;
+    color: var(--text) !important;
+    background: transparent !important;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-menu .p-menuitem-link:hover {
+    background: var(--accent-bg) !important;
+    color: var(--text-h) !important;
+}
+
+.sidebar-menu .p-menuitem-link:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.sidebar-menu .p-menuitem-icon,
+.sidebar-menu .p-menuitem-text {
+    color: inherit !important;
+}
+
+.sidebar-menu .p-menuitem-icon {
+    font-size: 1rem;
+    margin-right: 0.65rem;
+}
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.sidebar-avatar {
+    background-color: var(--accent) !important;
+    color: #fff !important;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.sidebar-footer-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.sidebar-footer-name {
+    font-weight: 600;
+    color: var(--text-h);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-footer-email {
+    font-size: 0.78rem;
+    color: var(--text);
+    opacity: 0.75;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Dark mode overrides for PrimeReact Sidebar internals */
+:root.dark .p-sidebar,
+:root.dark .p-sidebar .p-sidebar-content {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+:root.dark .p-sidebar .p-sidebar-header .p-sidebar-close {
+    color: var(--text) !important;
+}
+
+:root.dark .p-sidebar .p-sidebar-header .p-sidebar-close:hover {
+    background: var(--accent-bg) !important;
+    color: var(--text-h) !important;
+}
