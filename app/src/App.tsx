@@ -12,6 +12,7 @@ function App() {
   const [status, setStatus] = useState<AuthStatus>(() => {
     if (localStorage.getItem('token')) return 'verificando';
     localStorage.removeItem('usuario');
+    localStorage.removeItem('theme');
     return 'naoAutenticado';
   });
 
@@ -29,6 +30,7 @@ function App() {
         if (cancelado) return;
         localStorage.removeItem('token');
         localStorage.removeItem('usuario');
+        localStorage.removeItem('theme');
         setStatus('naoAutenticado');
       }
     })();
@@ -76,6 +78,7 @@ function App() {
               onLogout={() => {
                 localStorage.removeItem('token');
                 localStorage.removeItem('usuario');
+                localStorage.removeItem('theme');
                 setStatus('naoAutenticado');
               }}
             />

@@ -27,6 +27,7 @@ export default function Header({ onLogout }: HeaderProps) {
   function handleLogout() {
     localStorage.removeItem('token');
     localStorage.removeItem('usuario');
+    localStorage.removeItem('theme');
     onLogout();
   }
 

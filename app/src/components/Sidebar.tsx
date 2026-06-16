@@ -37,14 +37,12 @@ export default function SidebarComponent({ visible, onHide }: SidebarComponentPr
             label: 'Cadastros',
             items: [
                 { label: 'Clientes', icon: 'pi pi-users', command: go('/clientes') },
-                { label: 'Produtos', icon: 'pi pi-box', command: onHide },
             ],
         },
         {
             label: 'Sistema',
             items: [
                 { label: 'Configurações', icon: 'pi pi-cog', command: onHide },
-                { label: 'Ajuda', icon: 'pi pi-question-circle', command: onHide },
             ],
         },
     ];

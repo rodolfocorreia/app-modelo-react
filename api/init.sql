@@ -31,3 +31,20 @@ CREATE TABLE IF NOT EXISTS token (
     ON UPDATE CASCADE
     ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS tb_cad_clientes (
+  codigo INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  telefone VARCHAR(100) NOT NULL,
+  cpf_cnpj VARCHAR(20) NOT NULL,
+  endereco VARCHAR(200) NOT NULL,
+  cidade VARCHAR(100) NOT NULL,
+  estado VARCHAR(2) NOT NULL,
+  cep VARCHAR(20) NOT NULL,
+  ativo TINYINT(1) NOT NULL DEFAULT 1,
+  data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (codigo),
+  UNIQUE KEY IDX_tb_cad_clientes_email (email),
+  UNIQUE KEY IDX_tb_cad_clientes_cpf_cnpj (cpf_cnpj)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

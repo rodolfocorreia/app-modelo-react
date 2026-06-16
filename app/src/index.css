@@ -136,6 +136,17 @@ code {
   background: var(--code-bg);
 }
 
+/* Remove default purple focus ring on all buttons */
+button:focus,
+button:focus-visible,
+.p-button:focus,
+.p-button:focus-visible,
+.p-menuitem-link:focus,
+.p-menuitem-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* CLASSES */
 .p-password {
   display: unset !important;

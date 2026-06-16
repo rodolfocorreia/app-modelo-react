@@ -19,6 +19,7 @@ api.interceptors.response.use(
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       localStorage.removeItem('usuario');
+      localStorage.removeItem('theme');
       if (window.location.pathname !== '/login') {
         window.location.assign('/login');
       }

@@ -63,6 +63,13 @@
 
 .sidebar-menu .p-menuitem {
     margin: 2px 0;
+    background: transparent !important;
+}
+
+.sidebar-menu .p-menuitem-content,
+.sidebar-menu .p-menuitem-content:hover {
+    background: transparent !important;
+    border-radius: 8px !important;
 }
 
 .sidebar-menu .p-menuitem-link {
@@ -74,13 +81,27 @@
 }
 
 .sidebar-menu .p-menuitem-link:hover {
-    background: var(--accent-bg) !important;
+    background: #6365f198 !important;
     color: var(--text-h) !important;
 }
 
-.sidebar-menu .p-menuitem-link:focus {
+.sidebar-menu .p-menuitem-link:focus,
+.sidebar-menu .p-menuitem-link:focus-visible,
+.sidebar-menu .p-menuitem-link.p-focus {
     box-shadow: none !important;
     outline: none !important;
+}
+
+:root.dark .sidebar-menu .p-menuitem,
+:root.dark .sidebar-menu .p-menuitem-content,
+:root.dark .sidebar-menu .p-menuitem-content:hover,
+:root.dark .sidebar-menu .p-menuitem-link {
+    background: transparent !important;
+}
+
+:root.dark .sidebar-menu .p-menuitem-link:hover {
+    background: rgba(99, 101, 241, 0.89) !important;
+    color: var(--text-h) !important;
 }
 
 .sidebar-menu .p-menuitem-icon,
