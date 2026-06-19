@@ -9,6 +9,7 @@ import {
   ParseIntPipe,
   Patch,
   Post,
+  Put,
   UseGuards,
 } from '@nestjs/common';
 import {
@@ -53,9 +54,20 @@ export class ClientesController {
   }
 
   @ApiBearerAuth()
+  @ApiOperation({ summary: 'Atualiza os dados do cliente' })
+  @UseGuards(JwtAuthGuard)
+  @Put(':codigo')
+  atualizarCliente(
+    @Param('codigo', ParseIntPipe) codigo: number,
+    @Body() data: ClientesCadastrarDto,
+  ) {
+    return this.clientesService.atualizarCliente(codigo, data);
+  }
+
+  @ApiBearerAuth()
   @ApiOperation({ summary: 'Atualiza o status ativo do cliente' })
   @UseGuards(JwtAuthGuard)
-  @Patch(':codigo/ativo')
+  @Put(':codigo/ativo')
   updateAtivoCliente(
     @Param('codigo', ParseIntPipe) codigo: number,
     @Body() data: ClientesAlterarAtivoDto,

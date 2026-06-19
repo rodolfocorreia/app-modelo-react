@@ -4,7 +4,7 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import api from './services/api';
-import Clientes from './pages/Clientes';
+import Clientes from './pages/Clientes/Clientes';
 
 type AuthStatus = 'verificando' | 'autenticado' | 'naoAutenticado';
 

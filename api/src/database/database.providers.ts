@@ -1,5 +1,6 @@
 import { DataSource } from 'typeorm';
 
+import { Clientes } from '../clientes/clientes.entity';
 import { Token } from '../token/token.entity';
 import { Usuarios } from '../usuarios/usuarios.entity';
 
@@ -20,7 +21,7 @@ export const databaseProviders = [
         username: process.env.DB_USERNAME ?? 'mysql_admin',
         password: process.env.DB_PASSWORD ?? '123teste',
         database: process.env.DB_DATABASE ?? 'app_modelo_react',
-        entities: [Usuarios, Token],
+        entities: [Usuarios, Token, Clientes],
         synchronize: process.env.TYPEORM_SYNCHRONIZE === 'true',
       });
 

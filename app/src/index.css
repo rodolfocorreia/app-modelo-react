@@ -75,6 +75,63 @@
     color: var(--text-h);
 }
 
+:root.dark .p-datatable {
+    color: var(--text-h);
+    background-color: transparent;
+}
+
+:root.dark .p-datatable .p-datatable-thead > tr > th {
+    background-color: var(--surface-section);
+    color: var(--text-h);
+    border-color: var(--surface-border);
+}
+
+:root.dark .p-datatable .p-datatable-tbody > tr {
+    background-color: var(--surface-card);
+    color: var(--text-h);
+}
+
+:root.dark .p-datatable .p-datatable-tbody > tr > td {
+    background-color: inherit;
+    color: inherit;
+    border-color: var(--surface-border);
+}
+
+:root.dark .p-datatable .p-datatable-tbody > tr:hover,
+:root.dark .p-datatable .p-datatable-tbody > tr.p-highlight {
+    background-color: var(--surface-hover);
+    color: var(--text-h);
+}
+
+:root.dark .p-datatable .p-sortable-column:not(.p-highlight):hover,
+:root.dark .p-datatable .p-sortable-column.p-highlight {
+    background-color: var(--surface-hover);
+    color: var(--text-h);
+}
+
+:root.dark .p-datatable .p-sortable-column .p-sortable-column-icon {
+    color: var(--text);
+}
+
+:root.dark .p-paginator {
+    background-color: var(--surface-section);
+    color: var(--text-h);
+    border-color: var(--surface-border);
+}
+
+:root.dark .p-paginator .p-paginator-page,
+:root.dark .p-paginator .p-paginator-next,
+:root.dark .p-paginator .p-paginator-prev,
+:root.dark .p-paginator .p-paginator-first,
+:root.dark .p-paginator .p-paginator-last {
+    color: var(--text-h);
+}
+
+:root.dark .p-paginator .p-paginator-page.p-highlight {
+    background-color: var(--accent-bg);
+    color: var(--accent);
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;

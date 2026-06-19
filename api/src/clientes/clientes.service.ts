@@ -71,6 +71,29 @@ export class ClientesService {
     }
   }
 
+  async atualizarCliente(
+    codigo: number,
+    data: ClientesCadastrarDto,
+  ): Promise<Clientes> {
+    const cliente = await this.clienteRepository.findOne({ where: { codigo } });
+
+    if (!cliente) {
+      throw new NotFoundException(`Cliente ${codigo} nao encontrado`);
+    }
+
+    Object.assign(cliente, data);
+
+    try {
+      return await this.clienteRepository.save(cliente);
+    } catch (error) {
+      if (error instanceof QueryFailedError) {
+        throw new ConflictException('Email ou CPF/CNPJ ja cadastrado');
+      }
+      this.logger.error('Erro ao atualizar cliente', error as Error);
+      throw error;
+    }
+  }
+
   async updateAtivoCliente(
     codigo: number,
     data: ClientesAlterarAtivoDto,
